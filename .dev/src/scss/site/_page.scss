@@ -219,7 +219,46 @@
 		}
 		.slick-prev,
 		.slick-next {
-			display: none !important;
+			position: absolute;
+			all: unset;
+			bottom: 0;
+			color: #fff;
+			width: 60px;
+			height: 60px;
+			&::after {
+				content: url("../assets/seta.svg");
+			}
+		}
+		.slick-prev {
+			left: 30%;
+			bottom: -19%;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			&::after {
+				transform: scale(2) rotate(90deg);
+
+				position: absolute;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+			}
+		}
+		.slick-next {
+			right: 30%;
+			bottom: 23px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			&::after {
+				transform: scale(2) rotate(-90deg);
+				position: absolute;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+			}
 		}
 	}
 }
