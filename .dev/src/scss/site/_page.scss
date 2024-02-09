@@ -24,6 +24,7 @@
 		@include container;
 		gap: 164px;
 		color: $neutro-50;
+		// max-width: 800px;
 		@include media(s) {
 			flex-direction: column;
 			padding: 20 24px 60px;
@@ -109,11 +110,12 @@
 		}
 	}
 	&__content {
-		max-width: 579px;
+		// max-width: 579px;
 		padding-top: 32px;
 		.button--container {
 			display: flex;
 			gap: 16px;
+			margin-top: 30px;
 			@include media(s) {
 				gap: 8px;
 			}
