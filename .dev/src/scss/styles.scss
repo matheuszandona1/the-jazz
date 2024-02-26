@@ -9,3 +9,11 @@
 
 @import "./site/componentes";
 @import "./site/page";
+
+.page--typ {
+	a {
+		&:hover {
+			color: $cor-primaria !important;
+		}
+	}
+}

@@ -114,12 +114,16 @@ input:valid + label {
 	&.opacity {
 		background-color: #4e2251cc;
 	}
+
+	&:hover {
+		color: #fff;
+	}
 	&.white {
 		color: $cor-primaria;
 		background-color: #fff;
-	}
-	&:hover {
-		color: #fff;
+		&:hover {
+			color: $cor-primaria;
+		}
 	}
 }
 
