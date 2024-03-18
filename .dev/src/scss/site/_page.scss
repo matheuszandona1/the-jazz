@@ -221,49 +221,53 @@
 				max-width: 100%;
 			}
 		}
-		.slick-prev,
-		.slick-next {
+	}
+	.slick-prev,
+	.slick-next {
+		position: absolute;
+		all: unset;
+		bottom: 0;
+		color: #fff;
+		width: 60px;
+		cursor: pointer;
+		height: 60px;
+
+		&::after {
+			content: url("../assets/seta.svg");
+		}
+	}
+	.slick-prev {
+		left: 30%;
+		bottom: -19%;
+		@include media(s) {
+			bottom: -25%;
+		}
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&::after {
+			transform: scale(2) rotate(90deg);
+
 			position: absolute;
-			all: unset;
-			bottom: 0;
-			color: #fff;
-			width: 60px;
-			cursor: pointer;
-			height: 60px;
-			&::after {
-				content: url("../assets/seta.svg");
-			}
+			left: 0;
+			right: 0;
+			margin: 0 auto;
 		}
-		.slick-prev {
-			left: 30%;
-			bottom: -19%;
-
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			&::after {
-				transform: scale(2) rotate(90deg);
-
-				position: absolute;
-				left: 0;
-				right: 0;
-				margin: 0 auto;
-			}
+	}
+	.slick-next {
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include media(s) {
+			bottom: 30px;
 		}
-		.slick-next {
-			right: 30%;
-			bottom: 23px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
-			&::after {
-				transform: scale(2) rotate(-90deg);
-				position: absolute;
-				left: 0;
-				right: 0;
-				margin: 0 auto;
-			}
+		&::after {
+			transform: scale(2) rotate(-90deg);
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
 		}
 	}
 }

@@ -2,7 +2,8 @@ $(".resources__content").slick({
 	dots: true,
 	slidesToShow: 4,
 	slidesToScroll: 1,
-
+	prevArrow: $(".prev"),
+	nextArrow: $(".next"),
 	responsive: [
 		{
 			breakpoint: 1024,
